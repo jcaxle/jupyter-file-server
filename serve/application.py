@@ -8,7 +8,6 @@ from .handlers import (
     ErrorHandler,
     AuthFileHandler,
 )
-from tornado.web import StaticFileHandler
 
 
 DEFAULT_STATIC_FILES_PATH = os.path.join(os.path.dirname(__file__), "static")
@@ -21,7 +20,7 @@ class Application(ExtensionAppJinjaMixin, ExtensionApp):
     name = "serve"
 
     # The url that your extension will serve its homepage.
-    default_url = "/serve/"
+    default_url = "/serve/default"
 
     # Should your extension expose other server extensions when launched directly?
     load_other_extensions = True
@@ -47,10 +46,3 @@ class Application(ExtensionAppJinjaMixin, ExtensionApp):
     def initialize_settings(self):
         """Initialize settings."""
         self.log.info(f"Config {self.config}")
-
-
-# -----------------------------------------------------------------------------
-# Main entry point
-# -----------------------------------------------------------------------------
-# Inits the extension, starts server and routes 
-#main = launch_new_instance = Application.launch_instance

@@ -1,24 +1,15 @@
 """Jupyter server example handlers."""
-import os
 from jupyter_server.base.handlers import JupyterHandler
 from jupyter_server.extension.handler import ExtensionHandlerJinjaMixin, ExtensionHandlerMixin
 import tornado
 from tornado.web import StaticFileHandler
-
-
-BASEDIR_NAME = os.path.dirname(__file__)
-BASEDIR_PATH = os.path.abspath(BASEDIR_NAME)
-
-FILES_ROOT = "/home/jovyan/"
-
 
 class DefaultHandler(ExtensionHandlerMixin, JupyterHandler):
     """Default API handler."""
 
     @tornado.web.authenticated
     def get(self, path):
-        """Get the extension response."""
-        self.write("<h1>Hello Simple 1 - I am the default...</h1>")
+        self.write("<h1>polus-server-ext</h1>")
         self.write("For usage and more, please click <a href=\"https://github.com/jcaxle/polus-server-ext\">here</a>")
 
 class AuthFileHandler(JupyterHandler, StaticFileHandler):
