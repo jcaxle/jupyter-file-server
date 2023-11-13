@@ -20,7 +20,7 @@ class Application(ExtensionAppJinjaMixin, ExtensionApp):
     name = "serve"
 
     # The url that your extension will serve its homepage.
-    default_url = "/serve/default"
+    default_url = "/serve/"
 
     # Should your extension expose other server extensions when launched directly?
     load_other_extensions = True
