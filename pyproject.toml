@@ -3,8 +3,8 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-name = "polus-render-ext"
-description = "Required component within JupyterLabs to embed Polus Render"
+name = "polus-server-ext"
+description = "Serves files and serves a local build of Polus Render"
 readme = "README.md"
 license = ""
 requires-python = ">=3.9"
@@ -12,10 +12,14 @@ dependencies = [
     "jinja2",
     "jupyter_server",
 ]
+authors = {name = "Jeff Chen", email="jeff.chen@axleinfo.com"}
 version = "0.0.1"
 
+[project.urls]
+Homepage = "https://github.com/jcaxle/polus-server-ext"
+
 [project.scripts]
-jupyter-simple-ext1 = "serve.application:main"
+jupyter-server = "serve.application:main"
 
 [tool.hatch.build.targets.wheel.shared-data]
 "etc/jupyter/jupyter_server_config.d" = "etc/jupyter/jupyter_server_config.d"
