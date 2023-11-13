@@ -6,13 +6,13 @@ build-backend = "hatchling.build"
 name = "polus-server-ext"
 description = "Serves files and serves a local build of Polus Render"
 readme = "README.md"
-license = "License :: OSI Approved :: MIT License"
+license = "MIT"
 requires-python = ">=3.9"
 dependencies = [
     "jinja2",
     "jupyter_server",
 ]
-authors = {name = "Jeff Chen", email="jeff.chen@axleinfo.com"}
+authors = [{name = "Jeff Chen", email="jeff.chen@axleinfo.com"}]
 version = "0.0.1"
 
 [project.urls]
