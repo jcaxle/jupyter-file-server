@@ -20,3 +20,8 @@ jupyter-simple-ext1 = "serve.application:main"
 [tool.hatch.build.targets.wheel.shared-data]
 "etc/jupyter/jupyter_server_config.d" = "etc/jupyter/jupyter_server_config.d"
 
+[tool.hatch.build]
+include = [
+  "serve/static/",
+  "serve/templates/",
+]
