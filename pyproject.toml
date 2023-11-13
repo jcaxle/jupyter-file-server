@@ -12,7 +12,7 @@ dependencies = [
     "jinja2",
     "jupyter_server",
 ]
-authors = {name = "Jeff Chen", email="jeff.chen@axleinfo.com"}
+authors = [{name = "Jeff Chen", email="jeff.chen@axleinfo.com"}]
 version = "0.0.1"
 
 [project.urls]
