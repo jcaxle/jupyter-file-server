@@ -17,10 +17,6 @@ class AuthFileHandler(JupyterHandler, StaticFileHandler):
     def _initialize(self,path) -> None:
         StaticFileHandler._initialize(path)
 
-    @tornado.web.authenticated
-    def prepare(self):
-        pass
-
 
 class BaseTemplateHandler(ExtensionHandlerJinjaMixin, ExtensionHandlerMixin, JupyterHandler):
     """The base template handler."""
