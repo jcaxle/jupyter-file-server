@@ -46,3 +46,6 @@ class Application(ExtensionAppJinjaMixin, ExtensionApp):
     def initialize_settings(self):
         """Initialize settings."""
         self.log.info(f"Config {self.config}")
+
+main = launch_new_instance = Application.launch_instance
+
