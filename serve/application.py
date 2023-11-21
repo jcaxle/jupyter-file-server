@@ -37,7 +37,7 @@ class Application(ExtensionAppJinjaMixin, ExtensionApp):
         self.handlers.extend(
             [
                 (rf"/{self.name}/default/(.+)", DefaultHandler),
-                (rf"/{self.name}/file/(.+)", AuthFileHandler, {"path":"/home/jovyan/"}),
+                (rf"/{self.name}/file/(.+)", AuthFileHandler, {"path":"/"}),
                 (rf"/{self.name}/(.*)", ErrorHandler),
             ]
         )
